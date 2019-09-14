@@ -1,5 +1,8 @@
 # My Site build with React-Static
 
+[![Build Status](https://github.com/heavenshell/ts-react-static/workflows/build/badge.svg)](https://github.com/heavenshell/ts-react-static/actions)
+
+
 | Library        | Description                     |
 |:---------------|:--------------------------------|
 | React          | Declarative library             |
