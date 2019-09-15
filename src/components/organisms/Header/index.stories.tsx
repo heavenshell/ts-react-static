@@ -1,10 +1,19 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 
 import Header from '.'
 
+import { StoryProps } from '../../../types'
+
 import { createHeaderProps } from '../../__fixtures__/createLayout'
 
-storiesOf('organisms/Header', module).add('default', () => (
-  <Header {...createHeaderProps()} />
-))
+const story = {
+  title: 'organisms/Header',
+}
+
+export const component: StoryProps = () => <Header {...createHeaderProps()} />
+
+component.story = {
+  name: 'default',
+}
+
+export default story
