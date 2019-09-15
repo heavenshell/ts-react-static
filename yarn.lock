@@ -8918,10 +8918,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-jdown@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/jdown/-/jdown-1.0.2.tgz#ab330d2c5de59113f1ab80ab3c830866140ccfcc"
-  integrity sha512-fyJE52pPwYRqlAaRT5MhQZSTju00xMU41H9sOitmNXAyox4Wk8n7vqSFRjoH4TzO2TiDc5gFAyD8fp5WtMtauw==
+jdown@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/jdown/-/jdown-1.0.3.tgz#271c40f9c2656503bed365415b0b467f05eada5f"
+  integrity sha512-VeLHsVObN0PeL21XHpTkxlq9CXFOScxOgRjzLaccahMErEYrbt2R5QCjmYEwI7gyigmCM+2zHmdJfd5aGnHU3A==
   dependencies:
     camelcase "5.0.0"
     imagemin "6.1.0"
@@ -8930,6 +8930,7 @@ jdown@1.0.2:
     imagemin-pngquant "7.0.0"
     imagemin-svgo "7.0.0"
     imagemin-webp "5.0.0"
+    make-dir "3.0.0"
     metalsmith "2.3.0"
     metalsmith-auto-collections "0.1.4"
     metalsmith-markdown "1.1.0"
@@ -10100,6 +10101,13 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+make-dir@3.0.0, make-dir@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.0.0.tgz#1b5f39f6b9270ed33f9f054c5c0f84304989f801"
+  integrity sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
+  dependencies:
+    semver "^6.0.0"
+
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -10114,13 +10122,6 @@ make-dir@^2.0.0, make-dir@^2.1.0:
   dependencies:
     pify "^4.0.1"
     semver "^5.6.0"
-
-make-dir@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.0.0.tgz#1b5f39f6b9270ed33f9f054c5c0f84304989f801"
-  integrity sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
-  dependencies:
-    semver "^6.0.0"
 
 make-error@1.x:
   version "1.3.5"
