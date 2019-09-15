@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { MemoryRouter, Route, Switch, RouteProps } from 'react-router-dom'
-// import { MemoryRouterProps, WithRouterProps } from 'react-router'
 import { MemoryRouterProps, WithRouterStatics } from 'react-router'
 import { createMemoryHistory } from 'history'
 
@@ -12,42 +11,6 @@ type RouterInitialProps = {
   paths?: string[]
   initialPath?: string
 }
-
-/*
-export type Props = MemoryRouterProps &
-  RouterInitialProps & {
-    component?: RouteProps['component']
-    render?: RouteProps['render']
-  }
-
-const TestProvider: React.FC<Props> = ({
-  component: Component,
-  render,
-  paths,
-  initialPath,
-  search,
-}) => {
-  const initialEntries: MemoryRouterProps['initialEntries'] = paths.map(
-    path => ({ pathname: path, search })
-  )
-  const initialIndex = initialPath ? paths.indexOf(initialPath) : 0
-
-  return (
-    <MemoryRouter initialEntries={initialEntries} initialIndex={initialIndex}>
-      <Switch>
-        {paths.map(path => (
-          <Route
-            key={path}
-            path={path}
-            component={Component}
-            render={render}
-          />
-        ))}
-      </Switch>
-    </MemoryRouter>
-  )
-}
-*/
 
 export type Props = MemoryRouterProps &
   RouterInitialProps & {
