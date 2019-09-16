@@ -1,6 +1,17 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 
 import GitHubIcon from '.'
 
-storiesOf('atoms/GitHubIcon', module).add('default', () => <GitHubIcon />)
+import { StoryProps } from '../../../types'
+
+const story = {
+  title: 'atoms/GitHubIcon',
+}
+
+export const icon: StoryProps = () => <GitHubIcon />
+
+icon.story = {
+  name: 'default',
+}
+
+export default story

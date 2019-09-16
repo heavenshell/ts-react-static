@@ -1,6 +1,17 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 
 import TwitterIcon from '.'
 
-storiesOf('atoms/TwitterIcon', module).add('default', () => <TwitterIcon />)
+import { StoryProps } from '../../../types'
+
+const story = {
+  title: 'atoms/TwitterIcon',
+}
+
+export const twitterIcon: StoryProps = () => <TwitterIcon />
+
+twitterIcon.story = {
+  name: 'default',
+}
+
+export default story

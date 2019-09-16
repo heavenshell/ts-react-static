@@ -1,10 +1,18 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 
 import Footer from '.'
 
 import { createFooterProps } from '../../__fixtures__/createLayout'
+import { StoryProps } from '../../../types'
 
-storiesOf('organisms/Footer', module).add('default', () => (
-  <Footer {...createFooterProps()} />
-))
+const story = {
+  title: 'organisms/Footer',
+}
+
+export const component: StoryProps = () => <Footer {...createFooterProps()} />
+
+component.story = {
+  name: 'default',
+}
+
+export default story

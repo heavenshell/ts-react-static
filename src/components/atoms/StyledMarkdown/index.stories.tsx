@@ -1,10 +1,15 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 import convert from 'htmr'
 
 import { StyledMarkdown } from '.'
 
-storiesOf('atoms/StyledMarkdown', module).add('default', () => {
+import { StoryProps } from '../../../types'
+
+const story = {
+  title: 'atoms/StyledMarkdown',
+}
+
+export const styledMarkdown: StoryProps = () => {
   const md = `
     <h2 id="hello">
       <a class="anchor" href="#hello">
@@ -30,4 +35,10 @@ storiesOf('atoms/StyledMarkdown', module).add('default', () => {
       {convert(md)}
     </StyledMarkdown>
   )
-})
+}
+
+styledMarkdown.story = {
+  name: 'default',
+}
+
+export default story

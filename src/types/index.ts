@@ -1,3 +1,5 @@
+export * from './storybook'
+
 export type Next = {
   title: string
   slug: string

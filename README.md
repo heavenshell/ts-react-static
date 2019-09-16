@@ -55,4 +55,5 @@ $ yarn lint
 ```
 
 ## LICENSE
+
 MIT

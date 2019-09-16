@@ -1,13 +1,17 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { lorem } from 'faker'
 
 import Posts from '.'
 
 import { createLayoutProps } from '../../__fixtures__/createLayout'
+import { StoryProps } from '../../../types'
 
-storiesOf('pages/Posts', module).add('default', () => {
+const story = {
+  title: 'pages/Posts',
+}
+
+export const component: StoryProps = () => {
   const posts = Array.from(new Array(5), () => ({
     title: lorem.sentence(),
     slug: lorem.slug(),
@@ -25,4 +29,10 @@ storiesOf('pages/Posts', module).add('default', () => {
       posts={posts}
     />
   )
-})
+}
+
+component.story = {
+  name: 'default',
+}
+
+export default story

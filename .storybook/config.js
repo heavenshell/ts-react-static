@@ -9,8 +9,7 @@ import { ThemeProvider as MaterialThemeProvider } from '@material-ui/styles'
 import { getTheme } from '../src/theme'
 
 // automatically import all files ending in *.stories.tsx
-const req = require.context('../src/components', true, /.stories.tsx?$/)
-const loadStories = () => req.keys().forEach(filename => req(filename))
+const req = require.context('../src/components', true, /\.stories\.tsx?$/)
 const theme = getTheme()
 
 addDecorator(withKnobs)
@@ -23,7 +22,6 @@ addDecorator(getStory => {
     </StyledThemeProvider>
   )
 })
-
 
 addParameters({
   viewports: {
@@ -58,4 +56,4 @@ addParameters({
   },
 })
 
-configure(loadStories, module)
+configure(req, module)
