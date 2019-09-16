@@ -93,3 +93,5 @@ typings/
 dist/
 artifacts/
 tmp/
+package-lock.json
+storybook-static
