@@ -3,7 +3,6 @@ import * as React from 'react'
 import Header from '.'
 
 import { StoryProps } from '../../../types'
-
 import { createHeaderProps } from '../../__fixtures__/createLayout'
 
 const story = {

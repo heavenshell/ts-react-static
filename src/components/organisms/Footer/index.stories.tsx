@@ -15,5 +15,4 @@ component.story = {
   name: 'default',
 }
 
-
 export default story
