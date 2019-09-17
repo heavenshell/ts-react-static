@@ -2,6 +2,7 @@ import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { addParameters } from '@storybook/react'
+import { withScreenshot } from 'zisui'
 
 import { ThemeProvider as StyledThemeProvider } from 'emotion-theming'
 import { ThemeProvider as MaterialThemeProvider } from '@material-ui/styles'
@@ -22,6 +23,12 @@ addDecorator(getStory => {
     </StyledThemeProvider>
   )
 })
+
+addDecorator(
+  withScreenshot({
+    viewport: { width: 1280, height: 800 },
+  })
+)
 
 addParameters({
   viewports: {

@@ -94,4 +94,5 @@ dist/
 artifacts/
 tmp/
 package-lock.json
-storybook-static
+storybook-static/
+__screenshots__/
