@@ -4,7 +4,7 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
 import dayjs from 'dayjs'
 
 import Layout, { Props as LayoutProps } from '../../templates/Layout'
-import { Post as PostProps } from '../../../types'
+import { PostProps } from '../../../types'
 
 type ViewProps = {
   posts: PostProps[]

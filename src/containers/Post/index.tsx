@@ -6,11 +6,7 @@ import PostComponent from '../../components/pages/Post'
 import { useHandlers } from '../hooks/useHandlers'
 import { useStateHandlers } from '../hooks/useStateHandlers'
 import { useScroll } from '../hooks/useScroll'
-import {
-  Post as PostProps,
-  Next as NextProps,
-  Prev as PrevProps,
-} from '../../types'
+import { PostProps, NextProps, PrevProps } from '../../types'
 
 type Props = {
   post: PostProps

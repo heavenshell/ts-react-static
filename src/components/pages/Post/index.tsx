@@ -8,11 +8,7 @@ import convert from 'htmr'
 
 import Layout, { Props as LayoutProps } from '../../templates/Layout'
 import { StyledMarkdown } from '../../atoms/StyledMarkdown'
-import {
-  Post as PostProps,
-  Next as NextProps,
-  Prev as PrevProps,
-} from '../../../types'
+import { PostProps, NextProps, PrevProps } from '../../../types'
 
 type ViewProps = {
   post: PostProps

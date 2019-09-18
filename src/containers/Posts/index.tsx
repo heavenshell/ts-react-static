@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 import PostsComponent from '../../components/pages/Posts'
 import { useHandlers } from '../hooks/useHandlers'
 import { useStateHandlers } from '../hooks/useStateHandlers'
-import { Post as PostProps } from '../../types'
+import { PostProps } from '../../types'
 
 const Posts = withRouter(({ history }) => {
   const { posts } = useRouteData<{ posts: PostProps[] }>()

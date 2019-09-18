@@ -6,7 +6,7 @@ import AboutComponent from '../../components/pages/About'
 import { useHandlers } from '../hooks/useHandlers'
 import { useStateHandlers } from '../hooks/useStateHandlers'
 import { useScroll } from '../hooks/useScroll'
-import { Post as PostProps } from '../../types'
+import { PostProps } from '../../types'
 
 const About = withRouter(({ history, location }) => {
   const { about } = useRouteData<{ about: PostProps }>()
