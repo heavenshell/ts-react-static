@@ -35,3 +35,6 @@ jobs:
         echo 'storybook'
         ls "./dist/storybook/${{ github.head_ref }}"
       if: contains(github.ref, 'master')
+      run: |
+        echo "not master branch ${{ github.head_ref }}"
+      if: !contains(github.ref, 'master')
