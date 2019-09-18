@@ -24,12 +24,13 @@ jobs:
       run: |
         yarn lint
         yarn test
-
-    - name: Build app & storybook
-      run: |
         yarn build
         mkdir -p "./dist/storybook/${{ github.head_ref }}"
         yarn build-storybook -o "./dist/storybook/${{ github.head_ref }}"
-        ls ./dist
-        ls "./dist/storybook/${{ github.head_ref }}"
 
+    - name: Build app & storybook
+      run: |
+        echo 'dist'
+        ls ./dist
+        echo 'storybook'
+        ls "./dist/storybook/${{ github.head_ref }}"
