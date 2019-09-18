@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider'
 import dayjs from 'dayjs'
 
 import Layout, { Props as LayoutProps } from '../../templates/Layout'
-import { Post as PostProps } from '../../../types'
+import { PostProps } from '../../../types'
 
 type ViewProps = {
   posts: PostProps[]
