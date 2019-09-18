@@ -34,3 +34,4 @@ jobs:
         ls ./dist
         echo 'storybook'
         ls "./dist/storybook/${{ github.head_ref }}"
+      if: contains(github.ref, 'master')
