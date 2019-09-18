@@ -24,17 +24,20 @@ jobs:
       run: |
         yarn lint
         yarn test
+
+    - name: Build app & storybook
         yarn build
         mkdir -p "./dist/storybook/${{ github.head_ref }}"
         yarn build-storybook -o "./dist/storybook/${{ github.head_ref }}"
 
-    - name: Build app & storybook
+    - name: Deploy master
       run: |
         echo 'dist'
         ls ./dist
         echo 'storybook'
         ls "./dist/storybook/${{ github.head_ref }}"
       if: contains(github.ref, 'master')
+    - name: Deploy branch - "${{ github.head_ref }}"
       run: |
         echo "not master branch ${{ github.head_ref }}"
       if: contains(github.ref, 'master') == false
