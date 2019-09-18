@@ -26,6 +26,7 @@ jobs:
         yarn test
 
     - name: Build app & storybook
+      run: |
         yarn build
         mkdir -p "./dist/storybook/${{ github.head_ref }}"
         yarn build-storybook -o "./dist/storybook/${{ github.head_ref }}"
