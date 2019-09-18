@@ -6,6 +6,7 @@ import chokidar from 'chokidar'
 import marked from 'marked'
 import jdown from 'jdown'
 import SanitizeState from 'marked-sanitizer-github'
+import emoji from 'node-emoji'
 import prism from 'prismjs'
 import 'prismjs/components/prism-git'
 import 'prismjs/components/prism-markdown'
@@ -62,6 +63,10 @@ const createRenderer = () => {
       </a>
     `
   }
+  renderer.text = text => {
+    return text.replace(/(:.*:)/g, (match) => emoji.emojify(match))
+  }
+
   return renderer
 }
 
