@@ -28,4 +28,4 @@ jobs:
     - name: Build storybook
       run: |
         yarn build-storybook
-        echo github.ref
+        echo "${{ github.ref }}"
