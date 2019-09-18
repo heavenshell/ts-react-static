@@ -35,6 +35,13 @@ const globalStyle = css`
       text-decoration: underline;
     }
   }
+  ul,
+  ol {
+    margin-left: 0px;
+  }
+  ul li {
+    padding-left: 0px;
+  }
 `
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

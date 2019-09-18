@@ -50,8 +50,8 @@ const EntryList: React.FC<ViewProps & ActionProps> = React.memo(
       <StyledH1>Posts</StyledH1>
       <Divider />
       <StyledDiv>
-        {posts.map(post => (
-          <div key={post.slug}>
+        {posts.map((post, i) => (
+          <div key={post.slug || `post-${i}`}>
             <StyledBox alignItems="center">
               <Box marginLeft={1}>
                 <CalendarTodayIcon />

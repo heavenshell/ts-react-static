@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const StyledMarkdown = styled('div')<any>`
   margin-left: 8px;
+  margin-bottom: 32px;
   a {
     text-decoration: none;
     &:hover {
@@ -80,5 +81,9 @@ export const StyledMarkdown = styled('div')<any>`
     border: 0px;
     background: black;
     color: white;
+  }
+  ul,
+  ol {
+    margin-left: -16px;
   }
 `
