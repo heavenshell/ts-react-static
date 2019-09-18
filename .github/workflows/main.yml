@@ -24,11 +24,11 @@ jobs:
       run: |
         yarn lint
         yarn test
+        yarn build
 
     - name: Build storybook
       run: |
-        yarn build-storybook
-        echo ref "${{ github.ref }}"
-        echo head_ref "${{ github.head_ref }}"
-        echo base_ref "${{ github.base_ref }}"
+        mkdir -p "./dist/storybook/${{ github.head_ref }}"
+        yarn build-storybook -o "./dist/storybook/${{ github.head_ref }}"
+        ls ./dist
 
