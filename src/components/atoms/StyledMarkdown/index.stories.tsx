@@ -1,5 +1,13 @@
 import * as React from 'react'
 import convert from 'htmr'
+import marked from 'marked'
+import emoji from 'node-emoji'
+import prism from 'prismjs'
+import 'prismjs/components/prism-python'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-typescript'
+// eslint-disable-next-line import/no-unresolved
+import '!style-loader!css-loader!prismjs/themes/prism-okaidia.css'
 
 import { StyledMarkdown } from '.'
 
@@ -9,7 +17,7 @@ const story = {
   title: 'atoms/StyledMarkdown',
 }
 
-export const styledMarkdown: StoryProps = () => {
+export const component: StoryProps = () => {
   const md = `
     <h2 id="hello">
       <a class="anchor" href="#hello">
@@ -37,8 +45,112 @@ export const styledMarkdown: StoryProps = () => {
   )
 }
 
-styledMarkdown.story = {
+component.story = {
   name: 'default',
+}
+
+export const style: StoryProps = () => {
+  const renderer = new marked.Renderer()
+  renderer.text = text => {
+    return text.replace(/(:.*:)/g, match => emoji.emojify(match))
+  }
+  marked.setOptions({
+    renderer,
+    gfm: true,
+  })
+
+  const md = `
+  | foo | bar |
+  |:----|:----|
+  | foo | bar |
+  | foo | bar |
+
+  - foo
+    - bar
+      - baz
+  - foo
+  - foo
+    - bar
+  `
+
+  return (
+    <StyledMarkdown style={{ marginLeft: '24px' }}>
+      {convert(marked(md))}
+    </StyledMarkdown>
+  )
+}
+
+style.story = {
+  name: 'style',
+}
+
+export const codeblock: StoryProps = () => {
+  // If static.config.js can use from TypeScript, use it.
+  const entityMap: { [key: string]: string } = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+  }
+
+  const renderer = new marked.Renderer()
+  renderer.text = text => {
+    // Same as static.config.js
+    return text.replace(/(:.*:)/g, match => emoji.emojify(match))
+  }
+  marked.setOptions({
+    renderer,
+    gfm: true,
+    highlight: (code: string, lang: string) => {
+      const languages = lang ? prism.languages[lang] : prism.languages['ts']
+      return prism.highlight(
+        lang ? code : code.replace(/[&<>"'\/]/g, key => entityMap[key]),
+        languages,
+        lang
+      )
+    },
+  })
+
+  const ts = `
+  \`\`\`typescript
+  import * as React from 'react'
+
+  export const Hello = () => <h1>Hello</h1>
+  \`\`\`
+  `
+
+  const py = `
+  \`\`\`python
+  import os
+
+  def main():
+      print(os.path.dirname(__file__))
+
+  if __name__ == '__main__':
+      main()
+  \`\`\`
+  `
+
+  const markdowns = [ts, py]
+
+  return (
+    <React.Fragment>
+      {markdowns.map((md, i) => (
+        <StyledMarkdown
+          key={`${i}`}
+          style={{ marginLeft: '24px', background: 'black' }}
+        >
+          {convert(marked(md))}
+        </StyledMarkdown>
+      ))}
+    </React.Fragment>
+  )
+}
+
+codeblock.story = {
+  name: 'codeblock',
 }
 
 export default story
