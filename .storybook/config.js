@@ -4,6 +4,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { addParameters } from '@storybook/react'
 import { withScreenshot } from 'zisui'
 
+import { Global, css } from '@emotion/core'
 import { ThemeProvider as StyledThemeProvider } from 'emotion-theming'
 import { ThemeProvider as MaterialThemeProvider } from '@material-ui/styles'
 
@@ -13,11 +14,20 @@ import { getTheme } from '../src/theme'
 const req = require.context('../src/components', true, /\.stories\.tsx?$/)
 const theme = getTheme()
 
+const globalStyle = css`
+  * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue,
+      Hiragino Kaku Gothic ProN, Yu Gothic, Meiryo, sans-serif;
+  }
+`
+
 addDecorator(withKnobs)
 addDecorator(getStory => {
   return (
     <StyledThemeProvider theme={theme}>
       <MaterialThemeProvider theme={theme}>
+        <Global styles={globalStyle} />
         {getStory()}
       </MaterialThemeProvider>
     </StyledThemeProvider>
