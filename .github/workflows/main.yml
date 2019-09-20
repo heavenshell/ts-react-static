@@ -29,21 +29,21 @@ jobs:
     - name: Build app & storybook
       run: |
         yarn build
-        mkdir -p "./dist/storybook/${{ github.head_ref }}/expected"
+        mkdir -p "./dist/storybook/${{ github.head_ref }}"
         yarn build-storybook -o "./dist/storybook/${{ github.head_ref }}"
 
-    - name: Deploy branch - "${{ github.head_ref }}"
+    - name: Prepare upload artifact - "${{ github.head_ref }}"
       run: |
-        mkdir -p "./dist/__regressions__/${{ github.head_ref }}"
-        yarn screenshot -o "./dist/__regressions__/${{ github.head_ref }}"
+        mkdir -p "./dist/__regressions__/${{ github.head_ref }}/actual"
+        yarn screenshot -o "./dist/__regressions__/${{ github.head_ref }}/actual"
       if: contains(github.ref, 'master') == false
 
-    - uses: actions/checkout@v1 
+    - uses: actions/checkout@v1
     - name: Upload artifact
       uses: actions/upload-artifact@master
       with:
         name: screenshots
-        path: "./dist/__regressions__/${{ github.head_ref }}"
+        path: "./dist/__regressions__/${{ github.head_ref }}/actual"
       if: contains(github.ref, 'master') == false
 
     - name: Deploy master
