@@ -8,9 +8,9 @@ const story = {
   title: 'atoms/TwitterIcon',
 }
 
-export const twitterIcon: StoryProps = () => <TwitterIcon />
+export const component: StoryProps = () => <TwitterIcon />
 
-twitterIcon.story = {
+component.story = {
   name: 'default',
 }
 
