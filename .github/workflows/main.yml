@@ -38,11 +38,12 @@ jobs:
         yarn zisui -o "./dist/__regressions__/${{ github.head_ref }}"
       if: contains(github.ref, 'master') == false
 
-    - uses: actions/upload-artifact@master
+    - uses: actions/checkout@v1 
     - name: Upload artifact
-        with:
-          name: screenshots
-          path: "./dist/__regressions__/${{ github.head_ref }}"
+      uses: actions/upload-artifact@master
+      with:
+        name: screenshots
+        path: "./dist/__regressions__/${{ github.head_ref }}"
       if: contains(github.ref, 'master') == false
 
     - name: Deploy master
