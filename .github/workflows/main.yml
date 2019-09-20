@@ -39,7 +39,7 @@ jobs:
       if: contains(github.ref, 'master') == false
 
     - name: Upload artifact
-    - uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@master
       with:
         name: screenshots
         path: "./dist/__regressions__/${{ github.head_ref }}/actual"
