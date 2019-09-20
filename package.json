@@ -20,7 +20,8 @@
     "screenshot": "zisui --serverCmd 'start-storybook -p 6006' --serverTimeout 100000 http://localhost:6006",
     "build:dir": "mkdir -p ./dist/storybook",
     "build:storybook": "yarn build-storybook -o ./dist/storybook",
-    "build:all": "yarn build && yarn build:dir && yarn build:storybook"
+    "build:zisui": "yarn screenshot -o ./dist/__regressions__/",
+    "build:all": "yarn build && yarn build:dir && yarn build:storybook && yarn build:zisui"
   },
   "dependencies": {
     "@emotion/core": "10.0.17",
