@@ -38,9 +38,8 @@ jobs:
         yarn screenshot -o "./dist/__regressions__${{ github.head_ref }}/actual"
       if: contains(github.ref, 'master') == false
 
-    - uses: actions/checkout@v1
     - name: Upload artifact
-      uses: actions/upload-artifact@master
+    - uses: actions/upload-artifact@master
       with:
         name: screenshots
         path: "./dist/__regressions__/${{ github.head_ref }}/actual"
