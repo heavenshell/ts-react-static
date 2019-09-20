@@ -18,7 +18,9 @@
     "lint": "run-p -l lint:*",
     "test": "jest --maxWorkers=1",
     "screenshot": "zisui --serverCmd 'start-storybook -p 6006' --serverTimeout 100000 http://localhost:6006",
-    "build:all": "yarn build && mkdir -p ./dist/storybook && yarn build-storybook -o ./dist/storybook"
+    "build:dir": "mkdir -p ./dist/storybook",
+    "build:storybook": "yarn build-storybook -o ./dist/storybook",
+    "build:all": "yarn build && yarn build:dir && yarn build:storybook"
   },
   "dependencies": {
     "@emotion/core": "10.0.17",

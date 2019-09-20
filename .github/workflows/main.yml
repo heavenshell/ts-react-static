@@ -34,6 +34,7 @@ jobs:
 
     - name: Prepare upload artifact - "${{ github.head_ref }}"
       run: |
+        echo which wget
         mkdir -p "./dist/__regressions__${{ github.head_ref }}/actual"
         yarn screenshot -o "./dist/__regressions__/${{ github.head_ref }}/actual"
       if: contains(github.ref, 'master') == false
