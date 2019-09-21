@@ -4,6 +4,9 @@ import { lorem } from 'faker'
 
 import Post from '.'
 
+import json from '../../__fixtures__/json/post.json'
+import next from '../../__fixtures__/json/next.json'
+import prev from '../../__fixtures__/json/prev.json'
 import { createLayoutProps } from '../../__fixtures__/createLayout'
 import { StoryProps } from '../../../types'
 
@@ -18,6 +21,7 @@ export const component: StoryProps = () => {
     date: new Date(),
     contents: lorem.paragraphs(),
   }
+
   const next = {
     title: lorem.sentence(),
     slug: lorem.slug(),
@@ -71,6 +75,7 @@ export const first: StoryProps = () => {
     />
   )
 }
+
 first.story = {
   name: 'first',
 }
@@ -81,10 +86,6 @@ export const last: StoryProps = () => {
     slug: lorem.slug(),
     date: new Date(),
     contents: lorem.paragraphs(),
-  }
-  const prev = {
-    title: lorem.sentence(),
-    slug: lorem.slug(),
   }
 
   return (
@@ -100,8 +101,38 @@ export const last: StoryProps = () => {
     />
   )
 }
+
 last.story = {
   name: 'last',
+}
+
+export const regression: StoryProps = () => {
+  const post = {
+    ...json,
+    date: new Date(json.date),
+  }
+
+  const prev = {
+    title: lorem.sentence(),
+    slug: lorem.slug(),
+  }
+
+  return (
+    <Post
+      {...createLayoutProps()}
+      onPostLinkClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        action('onPostLinkClick')(e.target)
+      }}
+      post={post}
+      next={next}
+      prev={prev}
+    />
+  )
+}
+
+regression.story = {
+  name: 'regression',
 }
 
 export default story

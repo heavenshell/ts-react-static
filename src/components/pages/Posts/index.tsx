@@ -6,10 +6,10 @@ import Divider from '@material-ui/core/Divider'
 import dayjs from 'dayjs'
 
 import Layout, { Props as LayoutProps } from '../../templates/Layout'
-import { PostProps } from '../../../types'
+import { PostTitleProps } from '../../../types'
 
 type ViewProps = {
-  posts: PostProps[]
+  posts: PostTitleProps[]
 }
 
 type ActionProps = {
