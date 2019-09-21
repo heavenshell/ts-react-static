@@ -1097,6 +1097,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.3.tgz#dfa0c92efe44a1d1a7974fb49ffeb40ef2da5a27"
   integrity sha512-zVgvPwGK7c1aVdUVc9Qv7SqepOGRDrqCw7KZPSZziWGxSlbII3gmvGLPzLX4d0n0BMbamBacUrN22zOMyFFEkQ==
 
+"@emotion/weak-memoize@0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.4.tgz#622a72bebd1e3f48d921563b4b60a762295a81fc"
+  integrity sha512-6PYY5DVdAY1ifaQW6XYTnOMihmBVT27elqSjEoodchsGjzYlEsTQMcEhSud99kVawatyTZRTiVkJ/c6lwbQ7nA==
+
 "@hapi/address@2.x.x":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.1.tgz#61395b5ed94c4cb19c2dc4c85969cff3d40d583f"
@@ -2822,7 +2827,7 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-anymatch@^3.0.1:
+anymatch@^3.0.1, anymatch@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-3.1.0.tgz#e609350e50a9313b472789b2f14ef35808ee14d6"
   integrity sha512-Ozz7l4ixzI7Oxj2+cw+p0tVUt27BpaJ+1+q1TCeANWxHpvyn2+Un+YamBdfKu0uh8xLodGhoa1v7595NhKDAuA==
@@ -4329,12 +4334,12 @@ cheerio@^1.0.0-rc.2:
     lodash "^4.15.0"
     parse5 "^3.0.1"
 
-chokidar@3.0.2, chokidar@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.0.2.tgz#0d1cd6d04eb2df0327446188cd13736a3367d681"
-  integrity sha512-c4PR2egjNjI1um6bamCQ6bUNPDiyofNQruHvKgHQ4gDUP/ITSVSzNsiI5OWtHOsX323i5ha/kk4YmOZ1Ktg7KA==
+chokidar@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.1.1.tgz#27e953f3950336efcc455fd03e240c7299062003"
+  integrity sha512-df4o16uZmMHzVQwECZRHwfguOt5ixpuQVaZHjYMvYisgKhE+JXwcj/Tcr3+3bu/XeOJQ9ycYmzu7Mv8XrGxJDQ==
   dependencies:
-    anymatch "^3.0.1"
+    anymatch "^3.1.0"
     braces "^3.0.2"
     glob-parent "^5.0.0"
     is-binary-path "^2.1.0"
@@ -4362,6 +4367,21 @@ chokidar@^2.0.2, chokidar@^2.0.4, chokidar@^2.1.6, chokidar@^2.1.8:
     upath "^1.1.1"
   optionalDependencies:
     fsevents "^1.2.7"
+
+chokidar@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.0.2.tgz#0d1cd6d04eb2df0327446188cd13736a3367d681"
+  integrity sha512-c4PR2egjNjI1um6bamCQ6bUNPDiyofNQruHvKgHQ4gDUP/ITSVSzNsiI5OWtHOsX323i5ha/kk4YmOZ1Ktg7KA==
+  dependencies:
+    anymatch "^3.0.1"
+    braces "^3.0.2"
+    glob-parent "^5.0.0"
+    is-binary-path "^2.1.0"
+    is-glob "^4.0.1"
+    normalize-path "^3.0.0"
+    readdirp "^3.1.1"
+  optionalDependencies:
+    fsevents "^2.0.6"
 
 chownr@^1.1.1, chownr@^1.1.2:
   version "1.1.2"
@@ -5942,7 +5962,16 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-theming@10.0.18, emotion-theming@^10.0.14:
+emotion-theming@10.0.19:
+  version "10.0.19"
+  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.19.tgz#66d13db74fccaefad71ba57c915b306cf2250295"
+  integrity sha512-dQRBPLAAQ6eA8JKhkLCIWC8fdjPbiNC1zNTdFF292h9amhZXofcNGUP7axHoHX4XesqQESYwZrXp53OPInMrKw==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@emotion/weak-memoize" "0.2.4"
+    hoist-non-react-statics "^3.3.0"
+
+emotion-theming@^10.0.14:
   version "10.0.18"
   resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.18.tgz#7d636eb465cb190590e17d815b8d318be512ef7d"
   integrity sha512-zFAax4setUIKDj+cmbl3nxXDBRIMsPmiRNpg+qDmX9wTHW2TPWpETMGaDWB67LwK63rfSIkeTH7stFFnyKd2pQ==
