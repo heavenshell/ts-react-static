@@ -22,7 +22,7 @@
     "build:storybook": "yarn build-storybook -o ./dist/storybook",
     "build:zisui": "yarn screenshot -o ./dist/__regressions__/",
     "build:compress": "tar czf dist/__regressions__.tar.gz dist/__regressions__",
-    "build:all": "yarn build && yarn build:dir && yarn build:storybook && yarn build:zisui && build:compress"
+    "build:all": "yarn build && yarn build:dir && yarn build:storybook && yarn build:zisui && yarn build:compress"
   },
   "dependencies": {
     "@emotion/core": "10.0.17",
