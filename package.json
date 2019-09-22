@@ -18,7 +18,7 @@
     "lint": "run-p -l lint:*",
     "test": "jest --maxWorkers=1",
     "screenshot": "zisui --serverCmd 'start-storybook -p 6006' --serverTimeout 100000 http://localhost:6006 -i '**/Regression'",
-    "build:reg": "sh ./scripts/reg.sh",
+    "build:reg": "bash ./scripts/reg.sh",
     "build:all": "yarn build && yarn build:reg"
   },
   "dependencies": {
