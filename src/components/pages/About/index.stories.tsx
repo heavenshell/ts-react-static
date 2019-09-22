@@ -3,6 +3,7 @@ import { lorem } from 'faker'
 
 import About from '.'
 
+import json from '../../__fixtures__/json/about.json'
 import { createLayoutProps } from '../../__fixtures__/createLayout'
 import { StoryProps } from '../../../types'
 
@@ -18,6 +19,16 @@ export const component: StoryProps = () => {
 
 component.story = {
   name: 'default',
+}
+
+export const regression: StoryProps = () => {
+  const contents = json.content
+  const title = json.title
+  return <About {...createLayoutProps()} contents={contents} title={title} />
+}
+
+regression.story = {
+  name: 'regression',
 }
 
 export default story

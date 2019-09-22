@@ -1,7 +1,7 @@
 # My Site build with React-Static
 
 [![Build Status](https://github.com/heavenshell/ts-react-static/workflows/build/badge.svg)](https://github.com/heavenshell/ts-react-static/actions)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa9245e5-3cff-49a0-bf2c-cd3e8d37ca7a/deploy-status)](https://app.netlify.com/sites/heavenshell/deploys)
 
 | Library        | Description                     |
 |:---------------|:--------------------------------|
@@ -16,10 +16,15 @@
 | Enzyme         | React testing library           |
 | Storybook      | UI component dev & test         |
 
+- Site
+  - https://heavenshell.netlify.com/
+- Storybook
+  - https://heavenshell.netlify.com/storybook/
+
 ## Install
 
 ```
-$ yarn
+yarn
 ```
 
 ## Usage
@@ -27,31 +32,31 @@ $ yarn
 ### Build
 
 ```
-$ yarn build
+yarn build
 ```
 
 ### Development
 
 ```
-$ yarn start
+yarn start
 ```
 
 ### Storybook
 
 ```
-$ yarn storybook
+yarn storybook
 ```
 
 ### Test
 
 ```
-$ yarn test
+yarn test
 ```
 
 ### Lint
 
 ```
-$ yarn lint
+yarn lint
 ```
 
 ## LICENSE

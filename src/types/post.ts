@@ -8,7 +8,7 @@ export type PrevProps = {
   slug: string
 }
 
-type FrontMatterProps = {
+export type PostTitleProps = {
   title: string
   slug: string
   date: Date
@@ -16,4 +16,4 @@ type FrontMatterProps = {
 
 export type PostProps = {
   contents: string
-} & FrontMatterProps
+} & PostTitleProps

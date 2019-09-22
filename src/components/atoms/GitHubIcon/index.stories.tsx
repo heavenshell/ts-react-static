@@ -8,9 +8,9 @@ const story = {
   title: 'atoms/GitHubIcon',
 }
 
-export const icon: StoryProps = () => <GitHubIcon />
+export const component: StoryProps = () => <GitHubIcon />
 
-icon.story = {
+component.story = {
   name: 'default',
 }
 

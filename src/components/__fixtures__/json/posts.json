@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Minus optio fugiat harum.",
+    "date": "2020-01-01",
+    "slug": "foo"
+  },
+  {
+    "title": "Eveniet fugiat dignissimos ut aliquid consequatur.",
+    "date": "2020-01-02",
+    "slug": "bar"
+  },
+  {
+    "title": "Enim qui similique aliquid ut ut repudiandae aspernatur libero.",
+    "date": "2020-01-03",
+    "slug": "baz"
+  },
+  {
+    "title": "Consequatur dolore assumenda omnis necessitatibus sit.",
+    "date": "2020-01-04",
+    "slug": "spam"
+  },
+  {
+    "title": "Id porro aut cupiditate perspiciatis molestiae omnis accusamus at maiores.",
+    "date": "2020-01-05",
+    "slug": "ham"
+  }
+]

@@ -15,4 +15,12 @@ component.story = {
   name: 'default',
 }
 
+export const regression: StoryProps = () => (
+  <NotFound {...createLayoutProps()} />
+)
+
+regression.story = {
+  name: 'regression',
+}
+
 export default story
