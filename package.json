@@ -18,11 +18,8 @@
     "lint": "run-p -l lint:*",
     "test": "jest --maxWorkers=1",
     "screenshot": "zisui --serverCmd 'start-storybook -p 6006' --serverTimeout 100000 http://localhost:6006 -i '**/Regression'",
-    "build:dir": "mkdir -p ./dist/storybook",
-    "build:storybook": "yarn build-storybook -o ./dist/storybook",
-    "build:zisui": "yarn screenshot -o ./dist/__regressions__/",
-    "build:compress": "tar czf dist/__regressions__.tar.gz dist/__regressions__",
-    "build:all": "yarn build && yarn build:dir && yarn build:storybook && yarn build:zisui && yarn build:compress"
+    "build:reg": "sh ./scripts/reg.sh",
+    "build:all": "yarn build && yarn build:reg"
   },
   "dependencies": {
     "@emotion/core": "10.0.17",
