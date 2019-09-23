@@ -30,7 +30,7 @@ function run_reg () {
   reg-cli ./dist/__regressions__/actual ./dist/__regressions__/expected ./dist/__regressions__/reports/ -R ./dist/__regressions__/report.html
   mv reg.json ./dist/__regressions__/.
   rm -rf ./dist/__regressions__/tmp/*
-  mv ./dist/__regressions__/actual ./dist/__regressions__/tmp/expected
+  cp -r ./dist/__regressions__/actual ./dist/__regressions__/tmp/expected
   echo "./dist/__regressions__/actual to ./dist/__regressions__/tmp/exptected"
 }
 
