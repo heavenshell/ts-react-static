@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Root, Routes } from 'react-static'
 import { Switch, Route } from 'react-router-dom'
 import LinearProgress from '@material-ui/core/LinearProgress'
