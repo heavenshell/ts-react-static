@@ -112,11 +112,6 @@ export const regression: StoryProps = () => {
     date: new Date(json.date),
   }
 
-  const prev = {
-    title: lorem.sentence(),
-    slug: lorem.slug(),
-  }
-
   return (
     <Post
       {...createLayoutProps()}
