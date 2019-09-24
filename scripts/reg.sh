@@ -20,7 +20,7 @@ function download () {
     cd ./dist/__regressions__/tmp
     tar xzfv files.tar.gz
     cd $current
-    mv ./dist/__regressions__/tmp/expected ./dist/__regressions__/exptected/.
+    mv ./dist/__regressions__/tmp/expected ./dist/__regressions__/
     echo "move exptected to ./dist/__regressions__/exptected"
   fi
 }
