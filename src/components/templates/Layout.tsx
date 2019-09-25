@@ -58,8 +58,8 @@ const StyledHr = styled.hr<any>`
   margin: 0;
   flex-shrink: 0;
   background-color: ${props =>
-    props.theme['palette']['type'] === 'rgba(255, 255, 255, 0.12)'
-      ? '#FFFFFF'
+    props.theme['palette']['type'] === 'dark'
+      ? 'rgba(255, 255, 255, 0.12)'
       : 'rgba(0, 0, 0, 0.12)'};
 `
 

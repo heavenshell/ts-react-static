@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
 import Box from '@material-ui/core/Box'
-import Divider from '@material-ui/core/Divider'
 import dayjs from 'dayjs'
 
 import Layout, { Props as LayoutProps } from '../../templates/Layout'
@@ -44,11 +43,23 @@ const StyledTitleSpan = styled.span`
   text-overflow: ellipsis;
 `
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const StyledHr = styled.hr<any>`
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: ${props =>
+    props.theme['palette']['type'] === 'dark'
+      ? 'rgba(255, 255, 255, 0.12)'
+      : 'rgba(0, 0, 0, 0.12)'};
+`
+
 const EntryList: React.FC<ViewProps & ActionProps> = React.memo(
   ({ posts, onPostLinkClick }) => (
     <React.Fragment>
       <StyledH1>Posts</StyledH1>
-      <Divider />
+      <StyledHr />
       <StyledDiv>
         {posts.map((post, i) => (
           <div key={post.slug || `post-${i}`}>

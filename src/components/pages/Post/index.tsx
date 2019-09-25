@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import Box from '@material-ui/core/Box'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
-import Divider from '@material-ui/core/Divider'
 import dayjs from 'dayjs'
 import convert from 'htmr'
 
@@ -32,6 +31,7 @@ const StyledBox = styled(Box as any)`
   display: flex;
   margin: 0px;
   margin-top: 8px;
+  margin-bottom: 8px;
   padding: 0px;
 `
 
@@ -40,6 +40,18 @@ const StyledPaginationBox = styled(Box as any)`
   display: flex;
   margin-top: 16px;
   margin-left: 8px;
+`
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const StyledHr = styled.hr<any>`
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: ${props =>
+    props.theme['palette']['type'] === 'dark'
+      ? 'rgba(255, 255, 255, 0.12)'
+      : 'rgba(0, 0, 0, 0.12)'};
 `
 
 const Post: React.FC<Props> = React.memo(({ post, next, prev, ...props }) => {
@@ -53,9 +65,9 @@ const Post: React.FC<Props> = React.memo(({ post, next, prev, ...props }) => {
         </Box>
         <Box marginLeft={1}>{dayjs(post.date).format('YYYY-MM-DD')}</Box>
       </StyledBox>
-      <Divider />
+      <StyledHr />
       <StyledMarkdown>{item}</StyledMarkdown>
-      <Divider />
+      <StyledHr />
       <StyledPaginationBox alignItems="center">
         <Box flexGrow={1}>
           {prev && (
