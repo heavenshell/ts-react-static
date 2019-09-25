@@ -79,6 +79,11 @@ const config = {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{'My site'}</title>
+        <meta name="description" content={'Build with React-Static, Material-UI, Emotion etc'} />
+        <meta property="og:type" content={'website'} />
+        <meta property="og:title" content={'My site'} />
+        <meta property="og:description" content={'Build with React-Static, Material-UI, Emotion etc'} />
       </Head>
       <Body>
         {children}
