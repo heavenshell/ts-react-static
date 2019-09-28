@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Post from '.'
 
@@ -14,11 +14,8 @@ describe('<Post />', () => {
   })
 
   it('should set to props', () => {
-    const wrapper = shallow(
-      <TestProvider component={Post} pathname={'/posts/foo'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<PostProps>(
+      <TestProvider component={Post} paths={['/posts/foo']} />
     )
 
     const {
@@ -35,9 +32,8 @@ describe('<Post />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(Post)
       .children()
-      .children()
-      .dive<PostProps, {}>()
       .props()
 
     expect(post).not.toBe('')
@@ -67,11 +63,8 @@ describe('<Post />', () => {
 
     const { mockThemeChanage } = createMockStateHandlers({ isDarkTheme: false })
 
-    const wrapper = shallow(
-      <TestProvider component={Post} pathname={'/posts/foo'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<PostProps>(
+      <TestProvider component={Post} paths={['/posts/foo']} />
     )
 
     const {
@@ -86,9 +79,8 @@ describe('<Post />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(Post)
       .children()
-      .children()
-      .dive<PostProps, {}>()
       .props()
 
     const e = {

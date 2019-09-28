@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Home from '.'
 
@@ -14,9 +14,9 @@ describe('<Home />', () => {
   })
 
   it('should set to props', () => {
-    const wrapper = shallow(<TestProvider component={Home} pathname={'/'} />, {
-      suspenseFallback: true,
-    })
+    const wrapper = mount<HomeProps>(
+      <TestProvider component={Home} paths={['/']} />
+    )
 
     const {
       posts,
@@ -29,9 +29,8 @@ describe('<Home />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(Home)
       .children()
-      .children()
-      .dive<HomeProps, {}>()
       .props()
 
     expect(posts.length).toBe(5)
@@ -57,9 +56,7 @@ describe('<Home />', () => {
 
     const { mockThemeChanage } = createMockStateHandlers({ isDarkTheme: false })
 
-    const wrapper = shallow(<TestProvider component={Home} pathname={'/'} />, {
-      suspenseFallback: true,
-    })
+    const wrapper = mount(<TestProvider component={Home} paths={['/']} />)
 
     const {
       onAboutLinkClick,
@@ -70,9 +67,8 @@ describe('<Home />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(Home)
       .children()
-      .children()
-      .dive<HomeProps, {}>()
       .props()
 
     const e = {

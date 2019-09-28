@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import NotFound from '.'
 
@@ -14,11 +14,8 @@ describe('NotFound', () => {
   })
 
   it('should set to props', () => {
-    const wrapper = shallow(
-      <TestProvider component={NotFound} pathname={'/404/'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<AboutProps>(
+      <TestProvider component={NotFound} paths={['/404/']} />
     )
 
     const {
@@ -31,9 +28,8 @@ describe('NotFound', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(NotFound)
       .children()
-      .children()
-      .dive<AboutProps, {}>()
       .props()
 
     expect(isDarkTheme).toBeFalsy()
@@ -58,11 +54,8 @@ describe('NotFound', () => {
 
     const { mockThemeChanage } = createMockStateHandlers({ isDarkTheme: false })
 
-    const wrapper = shallow(
-      <TestProvider component={NotFound} pathname={'/404/'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<AboutProps>(
+      <TestProvider component={NotFound} paths={['/404/']} />
     )
 
     const {
@@ -74,9 +67,8 @@ describe('NotFound', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(NotFound)
       .children()
-      .children()
-      .dive<AboutProps, {}>()
       .props()
 
     const e = {

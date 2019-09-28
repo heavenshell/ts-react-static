@@ -1,11 +1,13 @@
 import * as React from 'react'
-import { withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import NotFoundComponent from '../../components/pages/Errors'
 import { useHandlers } from '../hooks/useHandlers'
 import { useStateHandlers } from '../hooks/useStateHandlers'
 
-const NotFound = withRouter(({ history }) => {
+const NotFound = () => {
+  const history = useHistory()
+
   const {
     onHomeLinkClick,
     onAboutLinkClick,
@@ -29,6 +31,6 @@ const NotFound = withRouter(({ history }) => {
       onThemeChange={onThemeChange}
     />
   )
-})
+}
 
 export default NotFound

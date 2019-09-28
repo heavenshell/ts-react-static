@@ -10,9 +10,11 @@ export const useScroll = ({ history, location }: UseScope) => {
     if (hash && hash.match(/^#/)) {
       // Remove '#'
       const id = hash.slice(1)
-      scroll.scroller.scrollTo(id, {
-        smooth: false,
-      })
+      if (scroll.scroller.get(id)) {
+        scroll.scroller.scrollTo(id, {
+          smooth: false,
+        })
+      }
     }
   }, [hash, history])
 }

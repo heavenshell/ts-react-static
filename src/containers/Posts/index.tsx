@@ -1,14 +1,16 @@
 import * as React from 'react'
 import { useRouteData } from 'react-static'
-import { withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import PostsComponent from '../../components/pages/Posts'
 import { useHandlers } from '../hooks/useHandlers'
 import { useStateHandlers } from '../hooks/useStateHandlers'
 import { PostProps } from '../../types'
 
-const Posts = withRouter(({ history }) => {
+const Posts = () => {
+  const history = useHistory()
   const { posts } = useRouteData<{ posts: PostProps[] }>()
+
   const {
     onAboutLinkClick,
     onHomeLinkClick,
@@ -35,6 +37,6 @@ const Posts = withRouter(({ history }) => {
       onThemeChange={onThemeChange}
     />
   )
-})
+}
 
 export default Posts

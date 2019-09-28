@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useRouteData } from 'react-static'
-import { withRouter } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import PostComponent from '../../components/pages/Post'
 import { useHandlers } from '../hooks/useHandlers'
@@ -14,8 +14,11 @@ type Props = {
   prev?: PrevProps
 }
 
-const Post = withRouter(({ history, location }) => {
+const Post = () => {
+  const history = useHistory()
+  const location = useLocation()
   const { post, prev, next } = useRouteData<Props>()
+
   const {
     onAboutLinkClick,
     onHomeLinkClick,
@@ -47,6 +50,6 @@ const Post = withRouter(({ history, location }) => {
       next={next}
     />
   )
-})
+}
 
 export default Post

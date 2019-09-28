@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import About from '.'
 
@@ -14,11 +14,8 @@ describe('<About />', () => {
   })
 
   it('should set to props', () => {
-    const wrapper = shallow(
-      <TestProvider component={About} pathname={'/about/'} hash={'#about'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<AboutProps>(
+      <TestProvider component={About} paths={['/about/']} hash={'#about'} />
     )
 
     const {
@@ -33,9 +30,8 @@ describe('<About />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(About)
       .children()
-      .children()
-      .dive<AboutProps, {}>()
       .props()
 
     expect(title).not.toBe('')
@@ -62,11 +58,8 @@ describe('<About />', () => {
 
     const { mockThemeChanage } = createMockStateHandlers({ isDarkTheme: false })
 
-    const wrapper = shallow(
-      <TestProvider component={About} pathname={'/about/'} hash={'#about'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<AboutProps>(
+      <TestProvider component={About} paths={['/about/']} hash={'#about'} />
     )
 
     const {
@@ -78,9 +71,8 @@ describe('<About />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(About)
       .children()
-      .children()
-      .dive<AboutProps, {}>()
       .props()
 
     const e = {

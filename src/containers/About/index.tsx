@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useRouteData } from 'react-static'
-import { withRouter } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import AboutComponent from '../../components/pages/About'
 import { useHandlers } from '../hooks/useHandlers'
@@ -8,7 +8,9 @@ import { useStateHandlers } from '../hooks/useStateHandlers'
 import { useScroll } from '../hooks/useScroll'
 import { PostProps } from '../../types'
 
-const About = withRouter(({ history, location }) => {
+const About = () => {
+  const history = useHistory()
+  const location = useLocation()
   const { about } = useRouteData<{ about: PostProps }>()
 
   const {
@@ -37,6 +39,6 @@ const About = withRouter(({ history, location }) => {
       onThemeChange={onThemeChange}
     />
   )
-})
+}
 
 export default About
