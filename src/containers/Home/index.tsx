@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { useRouteData } from 'react-static'
-import { withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router'
 
 import HomeComponent from '../../components/pages/Home'
 import { useHandlers } from '../hooks/useHandlers'
 import { useStateHandlers } from '../hooks/useStateHandlers'
 import { PostProps } from '../../types'
 
-const Home = withRouter(({ history }) => {
+const Home = () => {
+  const history = useHistory()
   const { posts } = useRouteData<{ posts: PostProps[] }>()
 
   const {
@@ -35,6 +36,6 @@ const Home = withRouter(({ history }) => {
       onThemeChange={onThemeChange}
     />
   )
-})
+}
 
 export default Home

@@ -5,14 +5,13 @@ import TestProvider, { Props } from './TestProvider'
 
 const renderHookWithWrapper = <P, R>(
   callback: (props: P) => R,
-  { pathname, params, search, hash }: Props,
+  { paths, search, hash }: Props,
   renderHookOptions?: Omit<RenderHookOptions<P>, 'wrapper'>
 ) =>
   renderHook(callback, {
     wrapper: ({ children }) => (
       <TestProvider
-        pathname={pathname}
-        params={params}
+        paths={paths}
         search={search}
         hash={hash}
         render={() => children}

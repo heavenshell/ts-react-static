@@ -9,13 +9,24 @@ describe('useScroll', () => {
     jest.restoreAllMocks()
   })
 
+  const createMockElement = (id: string) => {
+    const span = document.createElement('span')
+    span.id = id
+    document.body.appendChild(span)
+    return span
+  }
+  const removeMockElement = (element: HTMLElement) => {
+    document.body.removeChild(element)
+  }
+
   it('useScroll', () => {
+    const element = createMockElement('foo')
+
     const history = createMemoryHistory()
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    const spy = jest.spyOn(scroller, 'scrollTo')
-    spy.mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
 
     const location = {
       hash: '#foo',
@@ -27,15 +38,17 @@ describe('useScroll', () => {
     expect(scroller.scrollTo).toBeCalled()
     expect(scroller.scrollTo).toHaveBeenCalledTimes(1)
     expect(scroller.scrollTo).toHaveBeenCalledWith('foo', { smooth: false })
+    removeMockElement(element)
   })
 
   it('useScroll - encoded hash value', () => {
+    const element = createMockElement('foo bar baz')
+
     const history = createMemoryHistory()
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    const spy = jest.spyOn(scroller, 'scrollTo')
-    spy.mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
 
     const location = {
       hash: '#foo%20bar%20baz',
@@ -49,6 +62,7 @@ describe('useScroll', () => {
     expect(scroller.scrollTo).toHaveBeenCalledWith('foo bar baz', {
       smooth: false,
     })
+    removeMockElement(element)
   })
 
   it('useScroll - no hash value', () => {
@@ -56,8 +70,7 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    const spy = jest.spyOn(scroller, 'scrollTo')
-    spy.mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
 
     const location = {
       hash: '',
@@ -74,11 +87,27 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    const spy = jest.spyOn(scroller, 'scrollTo')
-    spy.mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
 
     const location = {
       hash: '/#/foo',
+      pathname: '/posts/',
+      search: '',
+      state: undefined,
+    }
+    renderHook(() => useScroll({ history, location }))
+    expect(scroller.scrollTo).toHaveBeenCalledTimes(0)
+  })
+
+  it('useScroll - hash does not found', () => {
+    const history = createMemoryHistory()
+    const mockHistoryPush = jest.fn().mockName('history.push')
+    history.push = mockHistoryPush
+
+    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
+
+    const location = {
+      hash: '#not_exist',
       pathname: '/posts/',
       search: '',
       state: undefined,

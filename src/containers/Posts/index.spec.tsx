@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Posts from '.'
 
-import { Props as PostProps } from '../../components/pages/Posts'
+import { Props as PostsProps } from '../../components/pages/Posts'
 import TestProvider from '../__fixtures__/TestProvider'
 import { createMockHandlers } from '../__fixtures__/createMockHandlers'
 import { createMockStateHandlers } from '../__fixtures__/createMockStateHandlers'
@@ -14,11 +14,8 @@ describe('<Posts />', () => {
   })
 
   it('should set to props', () => {
-    const wrapper = shallow(
-      <TestProvider component={Posts} pathname={'/posts/'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<PostsProps>(
+      <TestProvider component={Posts} paths={['/posts/']} />
     )
 
     const {
@@ -33,9 +30,8 @@ describe('<Posts />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(Posts)
       .children()
-      .children()
-      .dive<PostProps, {}>()
       .props()
 
     expect(posts.length).toBe(5)
@@ -63,11 +59,8 @@ describe('<Posts />', () => {
 
     const { mockThemeChanage } = createMockStateHandlers({ isDarkTheme: false })
 
-    const wrapper = shallow(
-      <TestProvider component={Posts} pathname={'/posts/'} />,
-      {
-        suspenseFallback: true,
-      }
+    const wrapper = mount<PostsProps>(
+      <TestProvider component={Posts} paths={['/posts/']} />
     )
 
     const {
@@ -80,9 +73,8 @@ describe('<Posts />', () => {
       onTwitterIconClick,
       onThemeChange,
     } = wrapper
+      .find(Posts)
       .children()
-      .children()
-      .dive<PostProps, {}>()
       .props()
 
     const e = {
