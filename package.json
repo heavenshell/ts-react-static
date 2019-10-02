@@ -22,11 +22,11 @@
     "build:all": "yarn build && yarn build:reg"
   },
   "dependencies": {
-    "@emotion/core": "10.0.17",
+    "@emotion/core": "10.0.20",
     "@emotion/styled": "10.0.17",
-    "@material-ui/core": "4.4.3",
+    "@material-ui/core": "4.5.0",
     "@material-ui/icons": "4.4.3",
-    "chokidar": "3.1.1",
+    "chokidar": "3.2.1",
     "dayjs": "1.8.16",
     "emotion": "10.0.17",
     "emotion-theming": "10.0.19",
@@ -35,9 +35,9 @@
     "marked-sanitizer-github": "1.0.0",
     "node-emoji": "1.10.0",
     "prismjs": "1.17.1",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
-    "react-router-dom": "5.1.0",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
+    "react-router-dom": "5.1.2",
     "react-scroll": "1.7.14",
     "react-static": "7.2.2",
     "react-static-plugin-mdx": "7.2.2",
@@ -45,7 +45,7 @@
     "react-static-plugin-sitemap": "7.2.2",
     "react-static-plugin-source-filesystem": "7.2.2",
     "react-static-plugin-typescript": "7.2.2",
-    "react-use": "12.2.1"
+    "react-use": "12.2.2"
   },
   "devDependencies": {
     "@babel/core": "7.6.2",
