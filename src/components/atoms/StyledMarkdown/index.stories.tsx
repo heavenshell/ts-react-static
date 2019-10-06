@@ -60,10 +60,14 @@ export const style: StoryProps = () => {
   })
 
   const md = `
+  ## Table
+
   | foo | bar |
   |:----|:----|
   | foo | bar |
   | foo | bar |
+
+  ## List
 
   - foo
     - bar
@@ -71,6 +75,14 @@ export const style: StoryProps = () => {
   - foo
   - foo
     - bar
+
+
+  ## Emoji
+
+  - :the_horns:
+  - :guitar:
+  - :camera:
+  - :cat:
   `
 
   return (
@@ -96,10 +108,6 @@ export const codeblock: StoryProps = () => {
   }
 
   const renderer = new marked.Renderer()
-  renderer.text = text => {
-    // Same as static.config.js
-    return text.replace(/(:.*:)/g, match => emoji.emojify(match))
-  }
   marked.setOptions({
     renderer,
     gfm: true,
