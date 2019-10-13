@@ -7,7 +7,7 @@ function prepare () {
   mkdir -p ./dist/__regressions__/{expected,actual,tmp}
   yarn build-storybook -o ./dist/storybook
   yarn screenshot -o ./dist/__regressions__/actual
-  echo "zisui finished"
+  echo "storycap finished"
 }
 
 function download () {

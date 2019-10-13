@@ -2,7 +2,7 @@ import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { addParameters } from '@storybook/react'
-import { withScreenshot } from 'zisui'
+import { withScreenshot } from 'storycap'
 
 import { Global, css } from '@emotion/core'
 import { ThemeProvider as StyledThemeProvider } from 'emotion-theming'

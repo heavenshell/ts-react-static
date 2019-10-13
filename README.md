@@ -15,7 +15,7 @@
 | Jest           | Testing framework                 |
 | Enzyme         | React testing library             |
 | Storybook      | UI component dev & test           |
-| zisui          | Capture screenshot from storybook |
+| storycap       | Capture screenshot from storybook |
 | reg-cli        | Visual regression test            |
 
 - Site
