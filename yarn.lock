@@ -1337,13 +1337,13 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@material-ui/core@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.5.2.tgz#90a27655db527326876f4390a9d28d69de2ed639"
-  integrity sha512-yARw/hwavOXqljP+biDXHcmfbC63n8EkA8C10/tZt7KkBp7fs+7+z3BNR+ffotd8/uhirIC1jQWWKdLoUc34yA==
+"@material-ui/core@4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.6.0.tgz#098a61d2af1778433d2d9a76de95be5f6aa87922"
+  integrity sha512-nzD0oO3R2dcX/+hmi5FUFSddMKySK76Ryuno3J/iOotbKvzXwbf9szzhL8KPNmsj+vizVNfkEfhzOuuCHRBKKQ==
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@material-ui/styles" "^4.5.2"
+    "@material-ui/styles" "^4.6.0"
     "@material-ui/system" "^4.5.2"
     "@material-ui/types" "^4.1.1"
     "@material-ui/utils" "^4.5.2"
@@ -1363,10 +1363,10 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@material-ui/styles@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.5.2.tgz#95ac4641a3daed5ee9cc91af1e224d39efafbecb"
-  integrity sha512-QUqPk4tdPiDLs/1flB6qdAqUrYSxHv4YLCgvFeZw9A9OK/lf8LFjciF/SsSIDOCwoV2kf3BiGTzWUGjb/TTgzA==
+"@material-ui/styles@^4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.6.0.tgz#15679fab6dcbe0cc2416f01a22966f3ea26607c5"
+  integrity sha512-lqqh4UEMdIYcU1Yth4pQyMTah02uAkg3NOT3MirN9FUexdL8pNA6zCHigEgDSfwmvnXyxHhxTkphfy0DRfnt9w==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/hash" "^0.7.1"
@@ -4966,7 +4966,7 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-copy-to-clipboard@^3.0.8, copy-to-clipboard@^3.1.0:
+copy-to-clipboard@^3.0.8, copy-to-clipboard@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/copy-to-clipboard/-/copy-to-clipboard-3.2.0.tgz#d2724a3ccbfed89706fac8a894872c979ac74467"
   integrity sha512-eOZERzvCmxS8HWzugj4Uxl8OJxa7T2k1Gi0X5qavwydHIfuSHq2dTD09LOg/XyGq4Zpb5IsR/2OJ5lbOegz78w==
@@ -5421,10 +5421,10 @@ date-now@^0.1.4:
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
-dayjs@1.8.16:
-  version "1.8.16"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.16.tgz#2a3771de537255191b947957af2fd90012e71e64"
-  integrity sha512-XPmqzWz/EJiaRHjBqSJ2s6hE/BUoCIHKgdS2QPtTQtKcS9E4/Qn0WomoH1lXanWCzri+g7zPcuNV4aTZ8PMORQ==
+dayjs@1.8.17:
+  version "1.8.17"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.17.tgz#53ec413f2a7b02afbea1846d61bb260fa8567cea"
+  integrity sha512-47VY/htqYqr9GHd7HW/h56PpQzRBSJcxIQFwqL3P20bMF/3az5c3PWdVY3LmPXFl6cQCYHL7c79b9ov+2bOBbw==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.4, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
@@ -11351,10 +11351,10 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
-nano-css@^5.1.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/nano-css/-/nano-css-5.2.0.tgz#1d794db644139665e68ffaeba1ec6d7c66fc620e"
-  integrity sha512-DrkBUciWkEvrWZUIyhjQkyqiF1x2bnB4FWZZ9FCYSz1Okcq5fUs6P2e46UaHYcdljaUkQbK0aS0h1I2zObCTBg==
+nano-css@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/nano-css/-/nano-css-5.2.1.tgz#73b8470fa40b028a134d3393ae36bbb34b9fa332"
+  integrity sha512-T54okxMAha0+de+W8o3qFtuWhTxYvqQh2ku1cYEqTTP9mR62nWV2lLK9qRuAGWmoaYWhU7K4evT9Lc1iF65wuw==
   dependencies:
     css-tree "^1.0.0-alpha.28"
     csstype "^2.5.5"
@@ -13708,40 +13708,40 @@ react-static-plugin-mdx@7.2.2:
   dependencies:
     "@mdx-js/loader" "^1.3.0"
 
-react-static-plugin-react-router@7.2.2:
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/react-static-plugin-react-router/-/react-static-plugin-react-router-7.2.2.tgz#50edec7783b695e837fb12b230fcf425542bb4c0"
-  integrity sha512-g0O+5f6Ru+S3L7SySsAZjMFANi8mashvCVW9nMrZuvIpSWfC0t2kZ47kpxN2dgW4gRmaHY1Mjr+0gBcAuY96Ww==
+react-static-plugin-react-router@7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-react-router/-/react-static-plugin-react-router-7.2.3.tgz#9f12b10b245565f187b7e1795e14b9e982aa26ba"
+  integrity sha512-zJwwR6VXqRG1ijSw3VgroEwSNpJfUhdqnCwUM0VbA4p4N7XAazNl33oVA5qGAPGFZDyxZCdWCgLD4R6ElzfHpA==
 
-react-static-plugin-sitemap@7.2.2:
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/react-static-plugin-sitemap/-/react-static-plugin-sitemap-7.2.2.tgz#6f454e352958fb48c1c27f22d6aeeeace53ca44e"
-  integrity sha512-uBnsjJBC/IIH+/FJXBUuMvxUPgZNe5KMPuVJPxaRhXFv9HBgYe9H1tCYnlrkZHRjF5aln399cvKyxrJs1CYhiQ==
+react-static-plugin-sitemap@7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-sitemap/-/react-static-plugin-sitemap-7.2.3.tgz#d3d9d53f419c33824cb694b2bd3b7de187e19a23"
+  integrity sha512-2gmFVONiBq3sLsS6qZv7thzsl4EnlKDY4+JhX2hyfFJCUPjBQ12Jh5On7C8jjCejrxaamtsaU3vYl9n5OrvVLg==
   dependencies:
     chalk "^2.4.2"
     fs-extra "^8.1.0"
 
-react-static-plugin-source-filesystem@7.2.2:
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/react-static-plugin-source-filesystem/-/react-static-plugin-source-filesystem-7.2.2.tgz#9405bd857a4ad7e75e8991840d16b4ebbd31d08c"
-  integrity sha512-z2gcxuCC9FVUZ+Sew9nizsFXJRRB52H+WTsOFGO5vEqGO8+FE0f0TlFHDNJ+7UzR5beAKWAOf9OVkS0xrrssww==
+react-static-plugin-source-filesystem@7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-source-filesystem/-/react-static-plugin-source-filesystem-7.2.3.tgz#8ce4b9e122d075f217899f44ec08db0747acc02c"
+  integrity sha512-pUf3J4LPFkVsVHlk7nj1xZkuSZPLqf5QhSgNtDtotfqY6Jslrv/NoZJFlvHCNZdOsVVFEfnAPN6VGlJzHtELkw==
   dependencies:
     chokidar "^3.0.2"
     glob "^7.1.4"
 
-react-static-plugin-typescript@7.2.2:
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/react-static-plugin-typescript/-/react-static-plugin-typescript-7.2.2.tgz#62aacca4b3397dab12959e4b9b76232310ec24fc"
-  integrity sha512-eTTVOEQ8OQCOGUtTtpA7RqN2j9xnX0K3QPPPyobFc9cluCvsm7jiOxrwj8o/M0NPA+XWfGrWYQg2cXbglNfGBw==
+react-static-plugin-typescript@7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-typescript/-/react-static-plugin-typescript-7.2.3.tgz#7ced88c2cfdd1550956720f050bcf25409517cd9"
+  integrity sha512-kcD1gd6a/KVgHLOSqtK7xcyw98mcjXmCsOXXPXmrADPrHWfKcJQUpFUuIhnSkueAtg7EWvHZf19Y9r4F10nA4Q==
   dependencies:
     "@babel/preset-typescript" "^7.3.3"
     convert-tsconfig-paths-to-webpack-aliases "^0.9.2"
     fork-ts-checker-webpack-plugin "^1.5.0"
 
-react-static@7.2.2:
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/react-static/-/react-static-7.2.2.tgz#09c43fd73d0c4201a3d21d8d1609d6afd578447a"
-  integrity sha512-+ebhBhRnAT/pPqwJBF1gqqxJOZWpV57fklxm5yM7zRU6xa+CNG3wnYj8VgYI4asjI+WSLnWx92Z+Yk2bWSKd9w==
+react-static@7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/react-static/-/react-static-7.2.3.tgz#bdc94206e7cc812d767d027a4315202f1eafdf2e"
+  integrity sha512-YLbkhEqEhOQtfCZFu+gB9Xbfnruyx3LZbSncbpf2FyMhxj7ofVgWh16SpWpR9wTRMD4x5V3WA7v2finPJOKKPg==
   dependencies:
     "@babel/cli" "^7.5.5"
     "@babel/core" "^7.5.5"
@@ -13876,18 +13876,18 @@ react-universal-component@^4.0.0:
     prop-types "^15.5.10"
     react-hot-loader "^4.3.6"
 
-react-use@13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/react-use/-/react-use-13.1.0.tgz#5a5775e785bc6349451a345ddc95f0745bf2f151"
-  integrity sha512-zG+mjRO7MUVe7GnP/eBZIZUHWFjT/p6Tgbq09YmqKY4Bqg4hG1UBz8Yv5IbL5IHhX58zehZJhCr2kx94xhNBYw==
+react-use@13.5.0:
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/react-use/-/react-use-13.5.0.tgz#5fe85278bf2ef5655b8458cd475ef9eba9b78261"
+  integrity sha512-AX9p66K5m5J2WSYrzT/0eB6yG4VheOfgRinNcYcf0sEPbtBkGSbqR3cd3dfrm7XEa/Fjrt8jVNeVxLyKQmlITg==
   dependencies:
-    copy-to-clipboard "^3.1.0"
-    nano-css "^5.1.0"
+    copy-to-clipboard "^3.2.0"
+    nano-css "^5.2.1"
     react-fast-compare "^2.0.4"
     resize-observer-polyfill "^1.5.1"
     screenfull "^5.0.0"
     set-harmonic-interval "^1.0.1"
-    throttle-debounce "^2.0.1"
+    throttle-debounce "^2.1.0"
     ts-easing "^0.2.0"
     tslib "^1.10.0"
 
@@ -15920,7 +15920,7 @@ throat@^4.0.0:
   resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
   integrity sha1-iQN8vJLFarGJJua6TLsgDhVnKmo=
 
-throttle-debounce@^2.0.1, throttle-debounce@^2.1.0:
+throttle-debounce@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-2.1.0.tgz#257e648f0a56bd9e54fe0f132c4ab8611df4e1d5"
   integrity sha512-AOvyNahXQuU7NN+VVvOOX+uW6FPaWdAOdRP5HfwYxAfCzXTFKRMoIMk+n+po318+ktcChx+F1Dd91G3YHeMKyg==
