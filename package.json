@@ -24,7 +24,7 @@
   "dependencies": {
     "@emotion/core": "10.0.22",
     "@emotion/styled": "10.0.23",
-    "@material-ui/core": "4.6.0",
+    "@material-ui/core": "4.7.0",
     "@material-ui/icons": "4.5.1",
     "chokidar": "3.3.0",
     "dayjs": "1.8.17",
@@ -35,8 +35,8 @@
     "marked-sanitizer-github": "1.0.0",
     "node-emoji": "1.10.0",
     "prismjs": "1.17.1",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "react-router-dom": "5.1.2",
     "react-scroll": "1.7.14",
     "react-static": "7.2.3",
@@ -45,7 +45,7 @@
     "react-static-plugin-sitemap": "7.2.3",
     "react-static-plugin-source-filesystem": "7.2.3",
     "react-static-plugin-typescript": "7.2.3",
-    "react-use": "13.5.0"
+    "react-use": "13.9.0"
   },
   "devDependencies": {
     "@babel/core": "7.7.4",
