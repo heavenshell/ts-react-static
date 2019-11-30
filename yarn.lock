@@ -13864,10 +13864,10 @@ react-universal-component@^4.0.0:
     prop-types "^15.5.10"
     react-hot-loader "^4.3.6"
 
-react-use@13.9.0:
-  version "13.9.0"
-  resolved "https://registry.yarnpkg.com/react-use/-/react-use-13.9.0.tgz#ff080858ff5887763c63fcafb87c56357c5c385b"
-  integrity sha512-wjyalFVfGr+pzM8FMwAzjGW010m7cFZ+qPT3NmVE+R+K9y4z2jBexCC8xNtcox9EwJHGnOx52aovjYZXws03jg==
+react-use@13.10.0:
+  version "13.10.0"
+  resolved "https://registry.yarnpkg.com/react-use/-/react-use-13.10.0.tgz#c7ee46b33b5e78d6f6e4557a619c413a9a644864"
+  integrity sha512-KT6bzGV5ua3JjOAn1pt7LnPQ92yqXrEb6a2YkKJmyjk/TA4PtXaywNXzAI92et8YpGTIG4juD6FkpMFkG309nw==
   dependencies:
     copy-to-clipboard "^3.2.0"
     nano-css "^5.2.1"
