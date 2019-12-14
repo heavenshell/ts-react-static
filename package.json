@@ -45,7 +45,7 @@
     "react-static-plugin-sitemap": "7.2.3",
     "react-static-plugin-source-filesystem": "7.2.3",
     "react-static-plugin-typescript": "7.2.3",
-    "react-use": "13.11.0"
+    "react-use": "13.12.2"
   },
   "devDependencies": {
     "@babel/core": "7.7.5",
