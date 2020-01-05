@@ -34,7 +34,7 @@
     "jdown": "1.0.3",
     "marked-sanitizer-github": "1.0.0",
     "node-emoji": "1.10.0",
-    "prismjs": "1.17.1",
+    "prismjs": "1.18.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-router-dom": "5.1.2",
