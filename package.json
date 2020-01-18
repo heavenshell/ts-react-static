@@ -34,18 +34,18 @@
     "jdown": "1.0.3",
     "marked-sanitizer-github": "1.0.0",
     "node-emoji": "1.10.0",
-    "prismjs": "1.18.0",
+    "prismjs": "1.19.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-router-dom": "5.1.2",
-    "react-scroll": "1.7.15",
+    "react-scroll": "1.7.16",
     "react-static": "7.2.3",
     "react-static-plugin-mdx": "7.2.2",
     "react-static-plugin-react-router": "7.2.3",
     "react-static-plugin-sitemap": "7.2.3",
     "react-static-plugin-source-filesystem": "7.2.3",
     "react-static-plugin-typescript": "7.2.3",
-    "react-use": "13.14.3"
+    "react-use": "13.20.0"
   },
   "devDependencies": {
     "@babel/core": "7.8.0",
