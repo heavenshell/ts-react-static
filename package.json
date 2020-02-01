@@ -30,7 +30,7 @@
     "dayjs": "1.8.19",
     "emotion": "10.0.27",
     "emotion-theming": "10.0.27",
-    "htmr": "0.8.6",
+    "htmr": "0.8.7",
     "jdown": "1.0.3",
     "marked-sanitizer-github": "1.0.0",
     "node-emoji": "1.10.0",
@@ -45,7 +45,7 @@
     "react-static-plugin-sitemap": "7.2.3",
     "react-static-plugin-source-filesystem": "7.2.3",
     "react-static-plugin-typescript": "7.2.3",
-    "react-use": "13.22.0"
+    "react-use": "13.22.4"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",
