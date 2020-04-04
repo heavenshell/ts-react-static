@@ -100,7 +100,7 @@
   },
   "resolutions": {
     "@types/react": "16.9.27",
-    "@types/react-dom": "16.9.5",
+    "@types/react-dom": "16.9.6",
     "@types/hoist-non-react-statics": "3.3.1"
   },
   "jest": {
