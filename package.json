@@ -22,21 +22,21 @@
     "build:all": "yarn build && yarn build:reg"
   },
   "dependencies": {
-    "@emotion/core": "10.0.27",
+    "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "@material-ui/core": "4.9.4",
+    "@material-ui/core": "4.9.12",
     "@material-ui/icons": "4.9.1",
-    "chokidar": "3.3.1",
-    "dayjs": "1.8.20",
+    "chokidar": "3.4.0",
+    "dayjs": "1.8.26",
     "emotion": "10.0.27",
     "emotion-theming": "10.0.27",
     "htmr": "0.8.8",
     "jdown": "1.0.3",
     "marked-sanitizer-github": "1.0.0",
     "node-emoji": "1.10.0",
-    "prismjs": "1.19.0",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "prismjs": "1.20.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-router-dom": "5.1.2",
     "react-scroll": "1.7.16",
     "react-static": "7.2.3",
@@ -45,7 +45,7 @@
     "react-static-plugin-sitemap": "7.2.3",
     "react-static-plugin-source-filesystem": "7.2.3",
     "react-static-plugin-typescript": "7.2.3",
-    "react-use": "13.26.1"
+    "react-use": "13.27.1"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
@@ -66,8 +66,8 @@
     "@types/node-emoji": "1.8.1",
     "@types/prismjs": "1.16.0",
     "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.6",
-    "@types/react-hot-loader": "4.1.0",
+    "@types/react-dom": "16.9.7",
+    "@types/react-hot-loader": "4.1.1",
     "@types/react-router-dom": "5.1.4",
     "@types/react-scroll": "1.5.4",
     "@types/webpack-env": "1.15.2",
@@ -100,7 +100,7 @@
   },
   "resolutions": {
     "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.6",
+    "@types/react-dom": "16.9.7",
     "@types/hoist-non-react-statics": "3.3.1"
   },
   "jest": {
