@@ -43,7 +43,7 @@ const StyledHr = styled.hr<any>`
   height: 1px;
   margin: 0;
   flex-shrink: 0;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.theme['palette']['type'] === 'dark'
       ? 'rgba(255, 255, 255, 0.12)'
       : 'rgba(0, 0, 0, 0.12)'};
@@ -54,9 +54,9 @@ const Home: React.FC<Props> = React.memo(({ posts, ...props }) => (
     <StyledH1>Recent posts</StyledH1>
     <StyledHr />
     <StyledDiv>
-      {posts.map(post => (
+      {posts.map((post) => (
         <div key={post.slug}>
-          <a onClick={e => props.onPostLinkClick(e, `/posts/${post.slug}`)}>
+          <a onClick={(e) => props.onPostLinkClick(e, `/posts/${post.slug}`)}>
             <StyledBox>
               <StyledInnerBox>
                 <CalendarTodayIcon />

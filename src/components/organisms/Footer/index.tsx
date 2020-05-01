@@ -16,9 +16,9 @@ export type Props = ActionProps
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const StyledFooter = styled.footer<any>`
-  padding: ${props => props.theme.spacing(6, 0)}px;
-  margin-top: ${props => props.theme.spacing(4)}px;
-  margin-bottom: ${props => props.theme.spacing(4)}px;
+  padding: ${(props) => props.theme.spacing(6, 0)}px;
+  margin-top: ${(props) => props.theme.spacing(4)}px;
+  margin-bottom: ${(props) => props.theme.spacing(4)}px;
 `
 
 const StyledA = styled.a`

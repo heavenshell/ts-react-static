@@ -46,7 +46,7 @@ const globalStyle = css`
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const StyledDiv = styled.div<any>`
-  background-color: ${props => props.theme.color};
+  background-color: ${(props) => props.theme.color};
   padding-top: 2px;
   padding-bottom: 8px;
 `
@@ -57,7 +57,7 @@ const StyledHr = styled.hr<any>`
   height: 1px;
   margin: 0;
   flex-shrink: 0;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.theme['palette']['type'] === 'dark'
       ? 'rgba(255, 255, 255, 0.12)'
       : 'rgba(0, 0, 0, 0.12)'};

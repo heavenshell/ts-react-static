@@ -24,7 +24,7 @@ const TestProvider = ({
   render,
 }: Props) => {
   const initialEntries: MemoryRouterProps['initialEntries'] = paths.map(
-    path => ({ pathname: path, search, hash })
+    (path) => ({ pathname: path, search, hash })
   )
   const initialIndex = initialPath ? paths.indexOf(initialPath) : 0
 
@@ -41,7 +41,7 @@ const TestProvider = ({
   return (
     <MemoryRouter initialEntries={initialEntries} initialIndex={initialIndex}>
       <Switch>
-        {paths.map(path => (
+        {paths.map((path) => (
           <Route key={path} path={path} component={Component} render={render} />
         ))}
       </Switch>

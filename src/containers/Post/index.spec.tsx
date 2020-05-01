@@ -31,10 +31,7 @@ describe('<Post />', () => {
       onReactStaticLinkClick,
       onTwitterIconClick,
       onThemeChange,
-    } = wrapper
-      .find(Post)
-      .children()
-      .props()
+    } = wrapper.find(Post).children().props()
 
     expect(post).not.toBe('')
     expect(next).not.toBe('')
@@ -78,10 +75,7 @@ describe('<Post />', () => {
       onReactStaticLinkClick,
       onTwitterIconClick,
       onThemeChange,
-    } = wrapper
-      .find(Post)
-      .children()
-      .props()
+    } = wrapper.find(Post).children().props()
 
     const e = {
       preventDefault: jest.fn().mockName('preventDefault'),
