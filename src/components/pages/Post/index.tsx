@@ -48,7 +48,7 @@ const StyledHr = styled.hr<any>`
   height: 1px;
   margin: 0;
   flex-shrink: 0;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.theme['palette']['type'] === 'dark'
       ? 'rgba(255, 255, 255, 0.12)'
       : 'rgba(0, 0, 0, 0.12)'};
@@ -71,14 +71,14 @@ const Post: React.FC<Props> = React.memo(({ post, next, prev, ...props }) => {
       <StyledPaginationBox alignItems="center">
         <Box flexGrow={1}>
           {prev && (
-            <a onClick={e => props.onPostLinkClick(e, prev.slug)}>
+            <a onClick={(e) => props.onPostLinkClick(e, prev.slug)}>
               {'<'} {prev.title}
             </a>
           )}
         </Box>
         <Box>
           {next && (
-            <a onClick={e => props.onPostLinkClick(e, next.slug)}>
+            <a onClick={(e) => props.onPostLinkClick(e, next.slug)}>
               {next.title} {'>'}
             </a>
           )}

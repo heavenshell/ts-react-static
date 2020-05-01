@@ -27,10 +27,7 @@ describe('NotFound', () => {
       onReactStaticLinkClick,
       onTwitterIconClick,
       onThemeChange,
-    } = wrapper
-      .find(NotFound)
-      .children()
-      .props()
+    } = wrapper.find(NotFound).children().props()
 
     expect(isDarkTheme).toBeFalsy()
     expect(onAboutLinkClick).toBeInstanceOf(Function)
@@ -66,10 +63,7 @@ describe('NotFound', () => {
       onReactStaticLinkClick,
       onTwitterIconClick,
       onThemeChange,
-    } = wrapper
-      .find(NotFound)
-      .children()
-      .props()
+    } = wrapper.find(NotFound).children().props()
 
     const e = {
       preventDefault: jest.fn().mockName('preventDefault'),

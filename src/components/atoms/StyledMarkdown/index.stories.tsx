@@ -51,8 +51,8 @@ component.story = {
 
 export const style: StoryProps = () => {
   const renderer = new marked.Renderer()
-  renderer.text = text => {
-    return text.replace(/(:.*:)/g, match => emoji.emojify(match))
+  renderer.text = (text) => {
+    return text.replace(/(:.*:)/g, (match) => emoji.emojify(match))
   }
   marked.setOptions({
     renderer,
@@ -114,7 +114,7 @@ export const codeblock: StoryProps = () => {
     highlight: (code: string, lang: string) => {
       const languages = lang ? prism.languages[lang] : prism.languages['ts']
       return prism.highlight(
-        lang ? code : code.replace(/[&<>"'\/]/g, key => entityMap[key]),
+        lang ? code : code.replace(/[&<>"'\/]/g, (key) => entityMap[key]),
         languages,
         lang
       )

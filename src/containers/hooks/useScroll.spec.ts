@@ -26,7 +26,7 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation((to) => to)
 
     const location = {
       hash: '#foo',
@@ -48,7 +48,7 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation((to) => to)
 
     const location = {
       hash: '#foo%20bar%20baz',
@@ -70,7 +70,7 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation((to) => to)
 
     const location = {
       hash: '',
@@ -87,7 +87,7 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation((to) => to)
 
     const location = {
       hash: '/#/foo',
@@ -104,7 +104,7 @@ describe('useScroll', () => {
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
 
-    jest.spyOn(scroller, 'scrollTo').mockImplementation(to => to)
+    jest.spyOn(scroller, 'scrollTo').mockImplementation((to) => to)
 
     const location = {
       hash: '#not_exist',

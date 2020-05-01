@@ -28,10 +28,7 @@ describe('<Home />', () => {
       onReactStaticLinkClick,
       onTwitterIconClick,
       onThemeChange,
-    } = wrapper
-      .find(Home)
-      .children()
-      .props()
+    } = wrapper.find(Home).children().props()
 
     expect(posts.length).toBe(5)
     expect(isDarkTheme).toBeFalsy()
@@ -66,10 +63,7 @@ describe('<Home />', () => {
       onReactStaticLinkClick,
       onTwitterIconClick,
       onThemeChange,
-    } = wrapper
-      .find(Home)
-      .children()
-      .props()
+    } = wrapper.find(Home).children().props()
 
     const e = {
       preventDefault: jest.fn().mockName('preventDefault'),

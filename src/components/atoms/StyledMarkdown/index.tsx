@@ -19,7 +19,7 @@ export const StyledMarkdown = styled('div')<any>`
     display: inline-block;
     vertical-align: bottom;
     visibility: visible;
-    fill: ${props =>
+    fill: ${(props) =>
       props.theme['palette']['type'] === 'dark' ? '#FFFFFF' : '#212121'};
   }
   h1 .anchor svg,
@@ -45,7 +45,7 @@ export const StyledMarkdown = styled('div')<any>`
     display: inline-block;
     vertical-align: middle;
     visibility: visible;
-    fill: ${props =>
+    fill: ${(props) =>
       props.theme['palette']['type'] === 'dark' ? '#FFFFFF' : '#212121'};
   }
   table {
@@ -71,9 +71,9 @@ export const StyledMarkdown = styled('div')<any>`
     padding: 0 3px 3px;
     border: 1px solid #eeeeee;
     border-radius: 3px;
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.theme['palette']['type'] === 'dark' ? 'black' : '#eeeeee'};
-    color: ${props =>
+    color: ${(props) =>
       props.theme['palette']['type'] === 'dark' ? '#e6db74' : '#e01e5a'};
   }
   pre code {
