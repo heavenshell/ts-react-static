@@ -17,7 +17,7 @@
     "lint:md": "markdownlint contents",
     "lint": "run-p -l lint:*",
     "test": "jest --maxWorkers=1",
-    "screenshot": "storycap --serverCmd 'start-storybook -p 6006' --serverTimeout 100000 http://localhost:6006 -i '**/Regression'",
+    "screenshot": "storycap --serverCmd 'start-storybook -p 6006' --serverTimeout 100000 http://localhost:6006 -i '**/regression'",
     "build:reg": "bash ./scripts/reg.sh",
     "build:all": "yarn build && yarn build:reg"
   },
