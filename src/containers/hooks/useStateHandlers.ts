@@ -10,7 +10,7 @@ const useDarkThemeStates = () => {
     false
   )
 
-  return { isDarkTheme, setDarkTheme }
+  return { isDarkTheme: !!isDarkTheme, setDarkTheme }
 }
 
 type UseDarkThemeHandlers = {

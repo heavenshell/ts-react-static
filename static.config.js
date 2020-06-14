@@ -96,7 +96,6 @@ const config = {
       fileInfo: true,
       markdown: {
         renderer,
-        sanitize: true,
         sanitizer: new SanitizeState().getSanitizer(),
         headerPrefix: 'user-content-',
         highlight: (code /*: string */, lang /*: string */) => {
