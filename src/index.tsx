@@ -15,7 +15,7 @@ if (typeof document !== 'undefined') {
   const renderMethod =
     target && target.hasChildNodes() ? ReactDOM.hydrate : ReactDOM.render
 
-  const render = (Comp: Function) => {
+  const render = (Comp: React.FC) => {
     renderMethod(
       <AppContainer>
         <Comp />
