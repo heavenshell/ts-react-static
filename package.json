@@ -60,7 +60,7 @@
     "@types/enzyme": "3.10.5",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/faker": "4.1.12",
-    "@types/jest": "26.0.4",
+    "@types/jest": "26.0.5",
     "@types/marked": "1.1.0",
     "@types/node": "12.12.50",
     "@types/node-emoji": "1.8.1",
