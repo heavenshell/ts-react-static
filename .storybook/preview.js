@@ -10,8 +10,6 @@ import { ThemeProvider as MaterialThemeProvider } from '@material-ui/styles'
 
 import { getTheme } from '../src/theme'
 
-// automatically import all files ending in *.stories.tsx
-const req = require.context('../src/components', true, /\.stories\.tsx?$/)
 const theme = getTheme()
 
 const globalStyle = css`
@@ -72,5 +70,3 @@ addParameters({
     },
   },
 })
-
-configure(req, module)
