@@ -8903,10 +8903,10 @@ htmlparser2@^4.1.0:
     domutils "^2.0.0"
     entities "^2.0.0"
 
-htmr@0.8.8:
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/htmr/-/htmr-0.8.8.tgz#9361db41d266b8ed475843069e79bfa47272114c"
-  integrity sha512-P59irizk8079Ec9yRBk/0NGS0s7soGnrnY4YiT4/RzU2/BPdB6ocMv2GMJZbzkMfiHig4Lk7mDagi1YX3kzL2A==
+htmr@0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/htmr/-/htmr-0.9.1.tgz#05dad9e0cf60e3bbf5e90939249cf94261d178cb"
+  integrity sha512-/EUdWHBmSbDUArPAPp5VFOdjSPBQr2ZnOwrEuuk886F/gRL6mEcoai6R4Mz1/dXI5us03tsnBEONIYJ/5vgMzA==
   dependencies:
     html-entities "^1.2.1"
     htmlparser2 "^3.10.1"
