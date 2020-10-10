@@ -30,7 +30,7 @@
     "dayjs": "1.9.1",
     "emotion": "10.0.27",
     "emotion-theming": "10.0.27",
-    "htmr": "0.8.8",
+    "htmr": "0.9.1",
     "jdown": "1.0.4",
     "marked-sanitizer-github": "1.0.1",
     "node-emoji": "1.10.0",
