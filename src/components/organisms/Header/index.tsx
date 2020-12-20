@@ -46,10 +46,9 @@ const WrappedIcons = styled.span`
   justify-content: inherit;
 `
 
-const Menu: React.FC<Omit<
-  ActionProps,
-  'onThemeChange' | 'onThemeToggle'
->> = React.memo(({ onHomeLinkClick, onAboutLinkClick, onPostsLinkClick }) => (
+const Menu: React.FC<
+  Omit<ActionProps, 'onThemeChange' | 'onThemeToggle'>
+> = React.memo(({ onHomeLinkClick, onAboutLinkClick, onPostsLinkClick }) => (
   <StyledDiv>
     <A onClick={onHomeLinkClick}>Home</A>
     <A onClick={onAboutLinkClick}>About</A>
