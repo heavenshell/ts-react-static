@@ -1,10 +1,13 @@
 import * as React from 'react'
-import { Global, css } from '@emotion/core'
+import {
+  Global,
+  css,
+  ThemeProvider as StyledThemeProvider,
+} from '@emotion/react'
 import styled from '@emotion/styled'
-import { ThemeProvider as StyledThemeProvider } from 'emotion-theming'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
-import { ThemeProvider as MaterialThemeProvider } from '@material-ui/styles'
+import { ThemeProvider as MaterialThemeProvider } from '@material-ui/core/styles'
 
 import Header, { Props as HeaderProps } from '../organisms/Header'
 import Footer, { Props as FooterProps } from '../organisms/Footer'

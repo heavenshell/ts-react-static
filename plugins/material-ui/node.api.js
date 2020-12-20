@@ -1,6 +1,5 @@
 import React from 'react'
-import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { ServerStyleSheets, ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
   palette: {
