@@ -34,8 +34,8 @@
     "marked-sanitizer-github": "1.0.1",
     "node-emoji": "1.10.0",
     "prismjs": "1.22.0",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-router-dom": "5.2.0",
     "react-scroll": "1.8.1",
     "react-static": "7.5.3",
@@ -44,7 +44,7 @@
     "react-static-plugin-sitemap": "7.5.3",
     "react-static-plugin-source-filesystem": "7.5.3",
     "react-static-plugin-typescript": "7.5.3",
-    "react-use": "15.3.8"
+    "react-use": "17.2.1"
   },
   "devDependencies": {
     "@babel/core": "7.13.8",
