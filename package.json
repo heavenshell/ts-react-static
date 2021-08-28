@@ -36,7 +36,7 @@
     "prismjs": "1.22.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-router-dom": "5.2.0",
+    "react-router-dom": "5.2.1",
     "react-scroll": "1.8.3",
     "react-static": "7.5.3",
     "react-static-plugin-mdx": "7.5.4",
