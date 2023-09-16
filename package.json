@@ -100,7 +100,7 @@
   "resolutions": {
     "@types/react": "16.14.46",
     "@types/react-dom": "16.9.19",
-    "@types/hoist-non-react-statics": "3.3.1"
+    "@types/hoist-non-react-statics": "3.3.2"
   },
   "jest": {
     "setupFilesAfterEnv": [
