@@ -98,8 +98,8 @@
     "typescript": "4.2.3"
   },
   "resolutions": {
-    "@types/react": "16.14.47",
-    "@types/react-dom": "16.9.20",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "@types/hoist-non-react-statics": "3.3.7"
   },
   "jest": {
